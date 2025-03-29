@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/reset-style.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/icons.css" />
+        <title>The Weather A</title>
+    </head>
+    <body>
+        <section class="notifications" id="notifications"></section>
+        <main class="main">
+            <section class="main_container">
+                <div class="search-block">
+                    <form class="search-form" id="searchForm">
+                        <input
+                            class="search-form_input"
+                            id="searchFormInput"
+                            type="text"
+                            placeholder="Write the name of city"
+                            autocomplete="off"
+                        />
+                        <button class="search-form_button"></button>
+                    </form>
+                </div>
+
+                <div class="general-block">
+                    <div class="information-about-city-block">
+                        <div
+                            class="information-about-city-block_temperature"
+                            id="cityTemperature"
+                        >
+                            -t°-
+                        </div>
+
+                        <div
+                            class="information-about-city-block_img-01d"
+                            id="cityImg"
+                        ></div>
+
+                        <div
+                            class="information-about-city-block_name-favorites"
+                        >
+                            <div
+                                class="information-about-city-block_name-favorites__name"
+                                id="cityName"
+                            >
+                                -City-
+                            </div>
+
+                            <input
+                                class="information-about-city-block_name-favorites__favorities"
+                                id="favoriteCheckBox"
+                                type="checkbox"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="favorites-cities-block">
+                        <div class="favorites-cities-block_title">
+                            Added Locations:
+                        </div>
+
+                        <ul
+                            class="favorites-cities-block_list"
+                            id="favoriteCities"
+                        >
+                            <li class="cityInList"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="../src/main.js" type="module"></script>
+    </body>
+</html>

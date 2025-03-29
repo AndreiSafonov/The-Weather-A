@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&display=swap");
+
+body {
+    font-family: "Jersey 10", sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main {
+    background-image: url(../images/ChatGPT\ Image\ 29\ мар.\ 2025\ г.\,\ 16_32_28.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.notifications {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 15px;
+}
+
+.new-notification {
+    background: rgb(246, 246, 246);
+    background: radial-gradient(
+        circle,
+        rgba(246, 246, 246, 1) 0%,
+        rgba(180, 237, 255, 1) 100%
+    );
+    padding: 10px;
+    border: 3px solid black;
+    font-size: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: show-notification;
+    animation-duration: 1s;
+}
+
+@keyframes show-notification {
+    from {
+        opacity: 0.5;
+        transform: translateX(270px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.close-notification-btn {
+    background: rgb(246, 246, 246);
+    background: radial-gradient(
+        circle,
+        rgba(246, 246, 246, 1) 0%,
+        rgba(180, 237, 255, 1) 100%
+    );
+    border: none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ea0c0c' d='M17 8v2h-1v1h-1v2h1v1h1v2h-1v1h-2v-1h-1v-1h-2v1h-1v1H8v-1H7v-2h1v-1h1v-2H8v-1H7V8h1V7h2v1h1v1h2V8h1V7h2v1z'/%3E%3Cpath fill='%23ea0c0c' d='M22 8V7h-1V6h-1V5h-1V4h-1V3h-1V2h-1V1H8v1H7v1H6v1H5v1H4v1H3v1H2v1H1v8h1v1h1v1h1v1h1v1h1v1h1v1h1v1h8v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1V8zm-2 7v1h-1v1h-1v1h-1v1h-1v1h-1v1H9v-1H8v-1H7v-1H6v-1H5v-1H4v-1H3V9h1V8h1V7h1V6h1V5h1V4h1V3h6v1h1v1h1v1h1v1h1v1h1v1h1v6z'/%3E%3C/svg%3E");
+    transition: 0.5s;
+}
+
+.close-notification-btn:hover {
+    transform: scale(110%);
+    transition: 0.5s;
+}
+
+.close-notification-btn:active {
+    transform: scale(100%);
+    transition: 0.1s;
+}
+
+.text-notification {
+    max-width: 180px;
+}
+
+.main_container {
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    background: rgb(246, 246, 246);
+    background: radial-gradient(
+        circle,
+        rgba(246, 246, 246, 1) 0%,
+        rgba(180, 237, 255, 1) 100%
+    );
+    box-shadow: 0px 0px 15px 10px black;
+}
+
+.search-block {
+    width: 100%;
+    border-bottom: 5px solid black;
+    border-radius: 5px 5px 0px 0px;
+    background: rgb(246, 246, 246);
+    background: radial-gradient(
+        circle,
+        rgba(246, 246, 246, 1) 0%,
+        rgba(180, 237, 255, 1) 100%
+    );
+}
+
+.search-form {
+    width: 100%;
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+}
+
+.search-form_input {
+    font-family: "Jersey 10", sans-serif;
+    background: rgb(246, 246, 246);
+    background: radial-gradient(
+        circle,
+        rgba(246, 246, 246, 1) 0%,
+        rgba(180, 237, 255, 1) 100%
+    );
+    width: 93%;
+    max-width: 900px;
+    font-size: 40px;
+    outline: none;
+    border: none;
+}
+
+.search-form_input::placeholder {
+    color: black;
+    font-size: 40px;
+}
+
+.search-form_button {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='iso-8859-1'?%3e%3c!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3e%3csvg fill='%23000000' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512' xml:space='preserve'%3e%3cg%3e%3cg%3e%3cpath d='M345.043,133.565v-33.391h-33.391V66.783H133.565v33.391h-33.391v33.391H66.783v178.087h33.391v33.391h33.391v33.391 h178.087v-33.391h33.391v-33.391h33.391V133.565H345.043z M311.652,267.13H256v33.391h33.391v33.391H155.826v-33.391h33.391 V267.13h-55.652V144.696h33.391v-33.391h111.304v33.391h33.391V267.13z'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='66.783' y='33.391' width='66.783' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='133.565' width='178.087' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='133.565' y='411.826' width='178.087' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='311.652' y='33.391' width='66.783' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='378.435' y='66.783' width='33.39' height='66.783'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='411.826' y='133.565' width='33.391' height='178.087'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='378.435' y='311.652' width='33.39' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='33.391' y='66.783' width='33.391' height='66.783'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect y='133.565' width='33.391' height='178.087'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='33.391' y='311.652' width='33.391' height='66.783'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='66.783' y='378.435' width='66.783' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='311.652' y='378.435' width='33.391' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='411.826' y='345.043' width='33.391' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='345.043' y='411.826' width='33.391' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='445.217' y='378.435' width='33.391' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='378.435' y='445.217' width='33.391' height='33.391'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='478.609' y='411.826' width='33.391' height='66.783'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3crect x='411.826' y='478.609' width='66.783' height='33.391'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    transition: 0.1s;
+    background-color: rgba(180, 237, 255, 1);
+    border: none;
+}
+
+.general-block {
+    display: flex;
+}
+
+.information-about-city-block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid black;
+    border-radius: 0px 0px 0px 5px;
+    background: rgb(65, 87, 214);
+    background: radial-gradient(
+        circle,
+        rgba(65, 87, 214, 1) 0%,
+        rgba(180, 237, 255, 1) 100%
+    );
+}
+
+.information-about-city-block_temperature {
+    font-size: 120px;
+    font-weight: 500;
+    padding-left: 10%;
+}
+
+.information-about-city-block_name-favorites {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5% 10% 5%;
+}
+
+.information-about-city-block_name-favorites__name {
+    font-size: 65px;
+    font-weight: 500;
+    min-width: 10px;
+}
+
+.information-about-city-block_name-favorites__favorities {
+    appearance: none;
+    transition: 0.3s;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23030303' d='M21 17v-1h1V2h-1V1H4v1H3v1H2v18h1v1h1v1h17v-1h1v-1h-1v-1h-1v-3zm-3 4H6v-1H5v-2h1v-1h12zm0-12h-1v1h-1v1h-1v1h-1v1h-1v1h-1v-1h-1v-1h-1v-1H9v-1H8V9H7V6h1V5h3v1h1v1h1V6h1V5h3v1h1z'/%3E%3C/svg%3E");
+}
+
+.information-about-city-block_name-favorites__favorities:checked {
+    appearance: none;
+    transition: 0.3s;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23de0000' d='M21 17v-1h1V2h-1V1H4v1H3v1H2v18h1v1h1v1h17v-1h1v-1h-1v-1h-1v-3zm-3 4H6v-1H5v-2h1v-1h12zm0-12h-1v1h-1v1h-1v1h-1v1h-1v1h-1v-1h-1v-1h-1v-1H9v-1H8V9H7V6h1V5h3v1h1v1h1V6h1V5h3v1h1z'/%3E%3C/svg%3E");
+}
+
+.favorites-cities-block {
+    border-left: 2.5px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 0px 0px 5px 0px;
+}
+
+.favorites-cities-block_title {
+    font-size: 50px;
+    padding: 5%;
+    border-bottom: 2.5px solid black;
+}
+
+.favorites-cities-block_list {
+    list-style-type: none;
+    font-size: 40px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cityInList {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+}
+
+.cityInList_city-name {
+    transition: 0.5s;
+}
+
+.cityInList_delete-button {
+    transition: 0.5s;
+    border: none;
+    display: inline-block;
+    background: rgb(65, 87, 214);
+    background: radial-gradient(
+        circle,
+        rgba(65, 87, 214, 1) 0%,
+        rgba(180, 237, 255, 1) 100%
+    );
+
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23030303' d='M22 3v2H2V3h6V2h1V1h6v1h1v1zM4 7v15h1v1h14v-2h1V7zm12 12h-2V9h2zm-6 0H8V9h2z'/%3E%3C/svg%3E");
+}
+
+.search-form_button:active {
+    transform: scale(90%);
+    transition: 0.1s;
+}
+
+.search-form_button:hover {
+    transform: scale(110%);
+    transition: 0.2s;
+}
+
+.information-about-city-block_name-favorites__favorities:hover {
+    transition: 0.3s;
+    scale: 110%;
+}
+
+.information-about-city-block_name-favorites__favorities:active {
+    transition: 0.2s;
+    scale: 100%;
+}
+
+.cityInList_city-name:hover {
+    transform: scale(110%);
+    transition: 0.5s;
+}
+
+.cityInList_city-name:active {
+    transform: scale(100%);
+    transition: 0.1s;
+}
+
+.cityInList_delete-button:hover {
+    transform: scale(125%);
+    transition: 0.5s;
+}
+
+.cityInList_delete-button:active {
+    transform: scale(100%);
+    transition: 0.1s;
+}
+
+@media (max-width: 700px) {
+    .general-block {
+        flex-direction: column;
+    }
+
+    .information-about-city-block {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border-bottom: 5px solid black;
+    }
+
+    .favorites-cities-block {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+
+    .favorites-cities-block_title {
+        font-size: 45px;
+        border-bottom: 5px solid black;
+    }
+}
